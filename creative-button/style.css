@@ -3,9 +3,8 @@
 /* background: linear-gradient(to right, #0c002b, #1779ff); */
 
 *{
-   padding: 0;
    margin: 0;
-   box-sizing: border-box;
+   padding: 0;
 }
 
 body{
@@ -13,44 +12,46 @@ body{
 }
 
 a{
-   text-decoration: none;
-   font-size: 30px;
    letter-spacing: 2px;
-   color: #1670f0;
+   font-size: 30px;
+   text-decoration: none;
+   
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%);
-   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+
    padding: 30px 60px;
+   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+   transform: translate(-50%, -50%);
 
    overflow: hidden;
 }
 
-a::before{
+a:before{
    content: "";
    background: rgba(255, 255, 255, 0.05);
-   width: 50%;
    position: absolute;
+   width: 50%;
    left: 0;
    top: 0;
    bottom: 0;
-   
+
 }
+
+
 
 a span:nth-child(1){
-   background: linear-gradient(to right, #0c002b, #1779ff);
+   position: absolute;
    width: 100%;
    height: 2px;
-   position: absolute;
-   top: 0;
+   background: linear-gradient(to right, #0c002b, #1779ff);
    left: 0;
+   top: 0;
 
    animation: animate1 2s linear infinite;
-
 }
 
-@keyframes animate1{
+@keyframes animate1 {
    to{
       transform: translateX(100%);
    }
@@ -60,15 +61,16 @@ a span:nth-child(1){
 }
 
 a span:nth-child(2){
-   background: linear-gradient(to left, #0c002b, #1779ff);
+   position: absolute;
    width: 100%;
    height: 2px;
-   position: absolute;
+   background: linear-gradient(to left, #0c002b, #1779ff);
+
    bottom: 0;
    left: 0;
-
    animation: animate2 2s linear infinite;
 }
+
 @keyframes animate2{
    to{
       transform: translateX(-100%);
@@ -79,15 +81,13 @@ a span:nth-child(2){
 }
 
 
-
 a span:nth-child(3){
-   background: linear-gradient(to bottom, #0c002b, #1779ff);
-   width: 2px;
-   height: 100%;
    position: absolute;
+   height: 100%;
+   width: 2px;
+   background: linear-gradient(to bottom, #0c002b, #1779ff);
    right: 0;
    top: 0;
-
    animation: animate3 2s linear infinite;
 }
 
@@ -101,10 +101,10 @@ a span:nth-child(3){
 }
 
 a span:nth-child(4){
-   background: linear-gradient(to top, #0c002b, #1779ff);
-   width: 2px;
-   height: 100%;
    position: absolute;
+   height: 100%;
+   width: 2px;
+   background: linear-gradient(to top, #0c002b, #1779ff);
    left: 0;
    top: 0;
 
@@ -116,7 +116,7 @@ a span:nth-child(4){
       transform: translateY(-100%);
    }
    from{
-      transform: translateY(100%);
+      transform: translateY(-00%);
    }
 }
 
