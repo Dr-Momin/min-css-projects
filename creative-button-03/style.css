@@ -1,5 +1,105 @@
+/* 
+
+   <a href="#" class="btn">
+         
+   Swipe Next 
+
+   <span>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+   </span>
+
+   </a>
+
+*/
 
 
+
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body{
+   background: #28272a;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+.btn{
+   position: relative;
+   width: 200px;
+   height: 60px;
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 60px;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: rgba(255, 255, 255, 0.5);
+   text-decoration: none;
+   letter-spacing: 2px;
+   border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+   border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+   padding-left: 40px;
+   
+   transition: 0.5s;
+   overflow: hidden;
+}
+
+
+.btn:hover{
+   padding-left: 0px;
+   padding-right: 40px;
+}
+
+.btn span{
+   position: absolute;
+   left: 5px;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background:  #04fe4d;
+   color: black;
+   border-radius: 50%;
+   font-size: 1.5rem;
+
+   transition: 0.5s;
+
+}
+
+.btn:hover span{
+   left: calc(100% - 55px);
+}
+
+.btn:after{
+   /* content: "";
+   position: absolute;
+   width: 80px;
+   height: 100%;
+   z-index: 1;
+   background: rgba(255, 255, 255, 0.5);
+   transform: translateX(-170px) skewX(30deg);
+   transition: 0.75s ease-in-out; */
+
+   content: "";
+   position: absolute;
+   width: 80px;
+   height: 100%;
+   z-index: 1;
+   background: rgba(255, 255, 255, 0.5);
+   transform: translateX(-170px) skewX(30deg);
+   transition: 0.75s ease-in-out;
+}
+
+.btn:hover:after{
+   transform: translateX(170px) skewX(30deg);
+} 
 
 
 /* 
