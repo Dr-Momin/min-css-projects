@@ -2,10 +2,22 @@
 /* Button Text : #1670f0  */
 /* background: linear-gradient(to right, #0c002b, #1779ff); */
 
+/* 
+
+   <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Button
+   </a>
+
+*/
+
 *{
    margin: 0;
    padding: 0;
-   
+   box-sizing: border-box;
 }
 
 body{
@@ -14,17 +26,30 @@ body{
    justify-content: center;
    align-items: center;
    min-height: 100vh;
+
 }
 
 a{
+   position: relative;
    text-decoration: none;
    font-size: 30px;
    color: #1670f0;
-   background: rgba(255, 255, 255, 0.1);
+   background: rgba(255, 255, 255, 0.05);
    padding: 20px 60px;
 
-   position: relative;
    overflow: hidden;
+   
+}
+
+a::before{
+   content: "";
+   position: absolute;
+   width: 50%;
+   height: 100%;
+   background: rgba(255, 255, 255, 0.1);
+   left: 0;
+   top: 0;
+   bottom: 0;
 }
 
 a span:nth-child(1){
@@ -34,17 +59,19 @@ a span:nth-child(1){
    background: linear-gradient(to right, #0c002b, #1779ff);
    top: 0;
    left: 0;
-
+   
    animation: animate1 2s linear infinite;
 }
 
 @keyframes animate1{
    to{
       transform: translateX(100%);
-   }from{
+   }
+   from{
       transform: translateX(-100%);
    }
 }
+
 
 a span:nth-child(2){
    position: absolute;
@@ -67,36 +94,38 @@ a span:nth-child(2){
 }
 
 
+
 a span:nth-child(3){
    position: absolute;
-   width: 2px;
    height: 100%;
-   background: linear-gradient(to bottom, #0c002b, #1779ff);
-   right: 0;
+   width: 2px;
+   background: linear-gradient(to top, #0c002b, #1779ff);
    top: 0;
+   left: 0;
 
-   animation: animate3 2s linear infinite;
+   animation: animate4 2s linear infinite;
 }
 
 @keyframes animate3{
    to{
       transform: translateY(100%);
-   }from{
+   }
+   from{
       transform: translateY(-100%);
    }
 }
-
 
 a span:nth-child(4){
    position: absolute;
    width: 2px;
    height: 100%;
-   background: linear-gradient(to top, #0c002b, #1779ff);
-   left: 0;
+   background: linear-gradient(to bottom, #0c002b, #1779ff);
    top: 0;
+   right: 0;
 
-   animation: animate4 2s linear infinite;
+   animation: animate3 2s linear infinite;
 }
+
 @keyframes animate4{
    to{
       transform: translateY(-100%);
